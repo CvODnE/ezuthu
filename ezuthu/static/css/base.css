@@ -1,0 +1,433 @@
+/* EZUTHU BASE THEME */
+
+:root {
+    --primary: #6B1E1E;     /* Deep Maroon */
+    --secondary: #3E2723;   /* Ink Brown */
+    --background: #FAF7F2;  /* Paper */
+    --text: #2B2B2B;        /* Charcoal */
+    --accent: #7A8450;      /* Olive */
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Serif Malayalam', serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.8;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.page-content {
+    flex: 1;
+    padding-bottom: 40px; /* space above footer */
+}
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--background);
+    border-bottom: 1px solid #e0ddd8;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+.nav-links a:last-child {
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.nav-links a:last-child:hover {
+    background-color: var(--secondary);
+    color: #ffffff;
+}
+/* CONTENT */
+.content {
+    padding-top: 30px;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* PARAGRAPH */
+p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+/* FOOTER */
+.page-content {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #f4f4f4;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+footer .container {
+    margin-bottom: 0px;
+}
+footer p {
+    margin-bottom: 0px;
+}
+footer p strong {
+    margin-bottom: 0px;
+}
+/* HOME PAGE */
+
+.home-hero {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.home-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: var(--secondary);
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* ACTION BUTTONS */
+
+.home-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #561818;
+}
+
+.btn-secondary {
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary);
+    color: #ffffff;
+}
+/* WRITINGS PAGE */
+
+.writing-card {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary);
+}
+
+.writing-title {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.writing-meta {
+    font-size: 14px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.writing-content {
+    font-size: 18px;
+    white-space: pre-wrap;
+}
+/* WRITERS PAGE */
+
+.writers-list {
+    margin-top: 30px;
+}
+
+.writer-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--secondary);
+}
+
+.writer-name {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.writer-about {
+    font-size: 16px;
+    color: var(--text);
+}
+
+.muted {
+    color: #777777;
+}
+
+.submit-container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom: 100px;
+}
+
+.submit-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.submit-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.submit-form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+.submit-form input,
+.submit-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.submit-form textarea {
+    min-height: 220px;
+    resize: vertical;
+}
+
+.submit-form input:focus,
+.submit-form textarea:focus {
+    outline: none;
+    border-color: #800000; /* EZUTHU maroon */
+}
+
+.submit-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 14px;
+    background: #800000;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #5c0000;
+}
+.nav-submit {
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.nav-submit:hover {
+    background-color: var(--secondary);
+    color: #ffffff;
+}
+.page-title {
+    font-size: 34px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* wrapper */
+.writings-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 26px;
+}
+
+/* card */
+.writing-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+/* hover effect */
+.writing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.10);
+}
+
+/* title */
+.writing-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+/* meta */
+.writing-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 14px;
+}
+
+.writing-meta .dot {
+    margin: 0 6px;
+    color: #bbb;
+}
+
+/* preview text */
+.writing-preview {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+.read-more {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--primary);
+    text-decoration: none;
+    position: relative;
+}
+
+.read-more::after {
+    content: "→";
+    margin-left: 6px;
+    transition: transform 0.2s ease;
+}
+
+.read-more:hover::after {
+    transform: translateX(6px);
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 28px;
+    }
+
+    .writing-card {
+        padding: 20px;
+    }
+}
+/* ===== WRITING DETAIL PAGE ===== */
+
+.writing-detail {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.detail-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.detail-meta {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 28px;
+}
+
+.detail-meta .dot {
+    margin: 0 6px;
+    color: #bbb;
+}
+
+.detail-content {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #222;
+    white-space: pre-wrap;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .detail-title {
+        font-size: 26px;
+    }
+
+    .detail-content {
+        font-size: 17px;
+    }
+}

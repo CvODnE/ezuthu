@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ writing.title }} | EZUTHU
+{% endblock %}
+
+{% block content %}
+
+<article class="writing-detail">
+
+    <h1 class="detail-title">
+        {{ writing.title }}
+    </h1>
+
+    <p class="detail-meta">
+        ✍️ {{ writing.writer.name }}
+        <span class="dot">•</span>
+        {{ writing.get_writing_type_display }}
+    </p>
+
+    <div class="detail-content">
+        {{ writing.content|linebreaks }}
+    </div>
+
+</article>
+
+{% endblock %}

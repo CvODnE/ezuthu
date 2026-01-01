@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}എഴുത്തുകൾ – EZUTHU{% endblock %}
+
+{% block content %}
+
+<h1 class="page-title">എഴുത്തുകൾ</h1>
+
+<div class="writings-wrapper">
+{% for writing in writings %}
+    <article class="writing-card">
+
+        <h2 class="writing-title">
+            {{ writing.title }}
+        </h2>
+
+        <p class="writing-meta">
+            ✍️ {{ writing.writer.name }}
+            <span class="dot">•</span>
+            {{ writing.get_writing_type_display }}
+        </p>
+
+        <p class="writing-preview">
+            {{ writing.content|truncatechars:120 }}
+        </p>
+
+        <a class="read-more"
+           href="{% url 'writing_detail' writing.id %}">
+            Read more
+        </a>
+
+    </article>
+{% empty %}
+    <p>ഇപ്പോൾ എഴുത്തുകൾ ലഭ്യമല്ല.</p>
+{% endfor %}
+</div>
+{% endblock %}

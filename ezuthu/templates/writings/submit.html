@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Submit Writing – EZUTHU{% endblock %}
+
+{% block content %}
+
+<div class="submit-container">
+
+    <h1 class="submit-title">Submit Your Writing</h1>
+    <p class="submit-subtitle">
+        Your words matter. Share them with EZUTHU.
+    </p>
+
+    <form method="post" class="submit-form">
+        {% csrf_token %}
+
+        <label>Writer Name</label>
+        {{ form.writer_name }}
+
+        <label>Title</label>
+        {{ form.title }}
+
+        <label>Content</label>
+        {{ form.content }}
+
+        <button type="submit" class="submit-btn">
+            Submit
+        </button>
+    </form>
+
+</div>
+
+{% endblock %}

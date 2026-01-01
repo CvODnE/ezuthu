@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}എഴുത്തുകാർ – EZUTHU{% endblock %}
+
+{% block content %}
+
+<h1>എഴുത്തുകാർ</h1>
+
+<div class="writers-list">
+    {% for writer in writers %}
+        <div class="writer-card">
+            <h2 class="writer-name">{{ writer.name }}</h2>
+
+            {% if writer.about %}
+                <p class="writer-about">{{ writer.about }}</p>
+            {% else %}
+                <p class="writer-about muted">
+                    എഴുത്തിനോട് സ്നേഹമുള്ള എഴുത്തുകാരൻ
+                </p>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>ഇപ്പോൾ എഴുത്തുകാർ ലഭ്യമല്ല.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

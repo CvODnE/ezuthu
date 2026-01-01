@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}EZUTHU – മനസ്സിൽ നിന്നു ജനിച്ച എഴുത്തുകൾ{% endblock %}
+
+{% block content %}
+
+<section class="home-hero">
+    <h1>EZUTHU</h1>
+    <p class="tagline">മനസ്സിൽ നിന്നു ജനിച്ച എഴുത്തുകൾ</p>
+
+    <p class="intro">
+        EZUTHU എഴുതാൻ ഇഷ്ടമുള്ളവർക്കും  
+        അവരുടെ ചിന്തകളും അനുഭവങ്ങളും  
+        എഴുത്തായി പങ്കുവെക്കാൻ ഉള്ള  
+        ഒരു ചെറിയ, സ്നേഹമുള്ള ഇടമാണ്.
+    </p>
+</section>
+
+<section class="home-actions">
+    <a href="{% url 'writings' %}" class="btn-primary">എഴുത്തുകൾ വായിക്കാം</a>
+    <a href="{% url 'writers' %}" class="btn-secondary">എഴുത്തുകാർ</a>
+</section>
+
+{% endblock %}
